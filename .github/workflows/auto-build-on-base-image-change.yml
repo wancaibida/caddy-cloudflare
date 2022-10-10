@@ -23,5 +23,5 @@ jobs:
         with:
           context: "${{ github.workspace }}"
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/caddy-cloudflare:2.6.1-builder-alpine
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/caddy-cloudflare:2.6.1-alpine
           file: "Dockerfile.alpine"
