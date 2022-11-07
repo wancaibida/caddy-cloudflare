@@ -25,3 +25,11 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/caddy-cloudflare:2.6.2-alpine
           file: "Dockerfile.alpine"
+
+      - name: Build and push Alpine Docker Image
+        uses: docker/build-push-action@v2.6.1
+        with:
+          context: "${{ github.workspace }}"
+          push: true
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/caddy-cloudflare-route53:2.6.2-alpine
+          file: "Dockerfile.alpine.route53"
